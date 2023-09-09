@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keshav's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="https://kit.fontawesome.com/5193b7b575.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="/"><img src="{% static 'images/logo.jpg' %}" class="logo" alt=""></a>
+
+                <ul id="sidemenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#qualification">Qualification</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Keshav Kumar</span> <br>from Greater Noida</h1>
+                <p class="intro">Hello, I'm a Full Stack developer and currently I'm in final year of my college. I'm a
+                    computer science student.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------about---------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="{% static 'images/keshav-2.jpg' %}" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Keshav kumar. I am a Full Stack Developer, and I'm Very passionate and dedicated to my
+                        work. And I create Web Apps using Django. Some other tech stacks I use are JavaScript, Python,
+                        HTML/CSS, MySQL.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('techskill')">Soft Skill</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="techskill">
+                        <ul>
+                            <li><span>FrontEnd Technology</span><br>HTML, CSS, JavaScript, React JS</li>
+                            <li><span>Backend Technology</span><br>Django Web Framework</li>
+                            <li><span>Languages</span><br>Java, Python, C</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>03/2023 to 09/2023</span><br>Six months internship as a full stack developer trainee in Netcoreinfo Business Group</li>
+                            <li><span>07/2023 - 08/2023</span><br>Technical Training in UPDESCO.</li>
+                            <li><span>07/2023 - 08/2023</span><br>Python Training in NITD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ----------------------Education---------------------- -->
+    <div id="qualification">
+        <div class="container">
+            <h1 class="sub-title">My Qualification</h1>
+            <div class="qualification-list">
+                <div>
+                    <i class="fa-solid fa-school"></i>
+                    <h2>High School Education</h2>
+                    <p>R. High School, Mahendrapur,<br> Begusarai, Bihar</p>
+                    <p>2016 - 2017</p>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-school-flag"></i>
+                    <h2>Senior Secondary Education</h2>
+                    <p>M. R. J. D. Inter College, <br>Begusarai, Bihar</p>
+                    <p>2018 - 2019</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h2>Under-Graduation</h2>
+                    <p>IIMT College of Engineering, <br>Greater Noida, U.P</p>
+                    <p>2020 - 2024(Pursuing)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------portfolio---------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="{% static 'images/work-1.png' %}" alt="">
+                    <div class="layer">
+                        <h3>BLOG SITE</h3>
+                        <p>It's a simple blog site. In this project admin control some features like - write blog, edit and other features, and also add search feature. <br>
+                            This project created using Django, Python, Bootstrap, Sql Database.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="{% static 'images/work-2.png' %}" alt="">
+                    <div class="layer">
+                        <h3>INVOICE GENERATOR</h3>
+                        <p>This project is INVOICE GENERATOR site. In this project have login, logout system, and Owner can also add all the details about company and it's services and so on.
+                            <br>This project created using Django, Python, Bootstrap, Sql Database.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="{% static 'images/work-4.png' %}" alt="">
+                    <div class="layer">
+                        <h3>CLACULATOR</h3>
+                        <p>This is a simple Calculator. In this calculator have add, subtract, multiply, divide and more functionality. <br>
+                            This project created using React JS, HTML, CSS, JavaScript.
+                        </p>
+                        <a href="https://orbit-cal.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- ----------------------contact---------------------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> keshavk1002003@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> +91-7050714903</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Keshav7091" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/keshavkumar09/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://twitter.com/Kesh__v098" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    </div>
+                    <a href="{% static 'images/keshav.pdf' %}" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Write your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Kevin. Made with by easy tutorial</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontets = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontet of tabcontets) {
+                tabcontet.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyUk9IF9NKkanZ8XA5K5Jlz4jSouxV3BsXU4d_samqqLARIDUwyWev7z5TcyBq2r6VQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000);
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
